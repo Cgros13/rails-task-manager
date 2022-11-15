@@ -1,0 +1,12 @@
+<h1>Task Selected</h1>
+
+<h2><%= @task.title %></h2>
+<h2><%= @task.details %></h2>
+<% if @task.completed == false %>
+  <%= "not done" %>
+<% else %>
+  <%= "Done" %>
+<% end %>
+<%= link_to "Task List", tasks_path %>
+
+<%= link_to "update", edit_task_path %>
